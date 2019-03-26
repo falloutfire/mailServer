@@ -28,15 +28,6 @@ class EmailController(private val emailSender: JavaMailSender) {
         sender.username = mail.fromUser.email
         sender.password = mail.fromUser.password
 
-
-        /*if (file != null) {
-            convFile = File(file.originalFilename)
-            convFile.createNewFile()
-            val fos = FileOutputStream(convFile)
-            fos.write(file.bytes)
-            fos.close()
-        }*/
-
         val arrayErrorsEmails = ArrayList<String>()
 
         mail.toUser.forEach {
